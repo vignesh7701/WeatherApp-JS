@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Search({ search, setSearch, handleSearch }) {
+  
 
   const onkeydown = (e) => {
     if (e.key === "Enter") {
@@ -8,7 +9,6 @@ export default function Search({ search, setSearch, handleSearch }) {
     }
   };
   return (
-
 
     <div className="w-full flex justify-around align-center mb-8 mt-4 p-1">
       <input

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import Search from "./Search";
 
+
 const Weather = () => {
+
+  const key = import.meta.env.VITE_API_KEY;
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
   const [weatherdata, setWeatherdata] = useState(null);
@@ -10,7 +13,7 @@ const Weather = () => {
     setLoading(true);
     try {
       const response = await fetch(
-         `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=903490dcad418e90369d403be477d560`
+         `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=${key}`
       );
 
       const data = await response.json();
